@@ -1,5 +1,6 @@
 *
 !.gitignore
 !*.c
+!*.h
 !README
-!set1
+!set1/
