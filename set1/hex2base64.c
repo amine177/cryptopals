@@ -15,7 +15,8 @@ static const char base64index[64] = {
   '4', '5', '6', '7', '8', '9', '+', '/'
 };
 
-
+// for testing
+/*
 char *hex2base64(char *, int);
 unsigned char bytetoi(unsigned char);
 char *string2hex(char *, int);
@@ -39,6 +40,8 @@ char *string2hex(char *s, int len)
     sprintf(o+i*2, "%02x", *(s+i));
   return o;
 }
+*/
+
 unsigned char bytetoi(unsigned char c)
 {
   if (c >= 'a' && c <= 'f') {
@@ -47,7 +50,6 @@ unsigned char bytetoi(unsigned char c)
   else if (c >= '0' && c <= '9')
     return c - '0';
 }
-
 
 char *hex2base64(char *s, int len)
 {
