@@ -42,7 +42,7 @@ char *string2hex(char *s, int len)
 }
 */
 
-unsigned char bytetoi(unsigned char c)
+unsigned char nibbletoi(unsigned char c)
 {
   if (c >= 'a' && c <= 'f') {
     return  c - 'a' + 10;
@@ -76,7 +76,7 @@ char *hex2base64(char *s, int len)
   olen = obits / 6;
   o = (char *) malloc(olen+1);
   for (i = 0; i < strlen(s); i++) {
-    *(c+i) = bytetoi(s[i]);
+    *(c+i) = nibbletoi(s[i]);
   }
   i = len;
   for ( j = 0; j < pad; j++)

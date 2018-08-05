@@ -22,6 +22,6 @@ char *hex2xor(char *s1, char *s2, int len)
   int i;
   char *o = malloc(strlen(s1)+1);
   for (i = 0; i < len; i++)
-    sprintf(o+i, "%x", bytetoi(s1[i]) ^ bytetoi(s2[i]));
+    sprintf(o+i, "%x", nibbletoi(s1[i]) ^ nibbletoi(s2[i]));
   return o;
 }
